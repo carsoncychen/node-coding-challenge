@@ -9,10 +9,8 @@ const PORT = process.env.PORT || 3000;
 // start express library
 const app = express();
 
-const indexRouter = require('./routes/index');
-const postsRouter = require('./routes/posts');
-const aboutmeRouter = require('./routes/aboutme');
-
+const postsRouter = require('./routes/postsRoute');
+const aboutmeRouter = require('./routes/aboutmeRoute');
 
 app.use(bodyParser.urlencoded({
   extended: false,
@@ -29,9 +27,9 @@ app.use(logger('dev'));
 /* set up app connect with css file */
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/posts', postsRouter);
+// app.use('/posts', postsRouter);
 
-app.use('/aboutme', aboutmeRouter);
+// app.use('/aboutme', aboutmeRouter);
 
 // setup home index page
 app.get('/', (req, res) => {

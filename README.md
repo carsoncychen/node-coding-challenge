@@ -12,4 +12,4 @@
 - Any request to an endpoint that is not defined should ‘Not Found’ as plain text
 
 ### Tech
-* express-generator - simplified skeleton express server. Can build from scratch if needed.
+* express-generator - simplified initial setup
