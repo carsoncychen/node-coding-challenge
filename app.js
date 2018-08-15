@@ -27,7 +27,7 @@ app.use(logger('dev'));
 /* set up app connect with css file */
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/posts', postsRouter);
+app.use('/posts', postsRouter);
 
 // app.use('/aboutme', aboutmeRouter);
 
