@@ -6,9 +6,6 @@ const aboutmeController = require('../controllers/aboutmeController');
 
 const routes = express.Router();
 
-routes.route('/:param')
-  .get(aboutmeController.getOne);
-
 routes.route('/')
   .get(aboutmeController.index);
 

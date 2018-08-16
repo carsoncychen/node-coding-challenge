@@ -24,30 +24,23 @@ const aboutMeData = [
 
 module.exports = {
 
-  // iterate through aboutMeData
-  // return an array of objects containing only questions and answers
-  findAll() {
-    const result = [];
-    for (let i = 0; i < aboutMeData.length; i++) {
-      const curObj = {};
-      curObj.question = aboutMeData[i].question;
-      curObj.answer = aboutMeData[i].answer;
-      result.push(curObj);
+  find(query) {
+    // if no query passed in, return whole data
+    if (Object.keys(query).length === 0) {
+      return aboutMeData;
     }
-    return result;
-  },
 
-  // iterate through aboutMeData
-  // if param in data match with param, return an object with question and answer
-  findByParam(param) {
-    const result = {};
+    // iterate through whole data looking for match of query.q
     for (let i = 0; i < aboutMeData.length; i++) {
-      if (aboutMeData[i].param === param) {
+      if (aboutMeData[i].param === query.q) {
+        const result = {};
         result.question = aboutMeData[i].question;
         result.answer = aboutMeData[i].answer;
+        return result;
       }
     }
-    return result;
-  },
 
+    // return Not Found message if no match
+    return { message: 'Not Found' };
+  },
 };
