@@ -9,8 +9,8 @@ module.exports = {
   getOne(req, res) {
     const { param } = req.params;
     const data = aboutmeDB.findByParam(param);
-    if (data[param] === undefined) {
-      res.render('error');
+    if (data.question === undefined) {
+      res.json({ message: 'Not Found' });
     } else {
       res.status(200).json(data);
     }
