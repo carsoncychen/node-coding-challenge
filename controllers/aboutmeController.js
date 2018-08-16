@@ -1,20 +1,14 @@
-const aboutMeData = [
-
-];
+const aboutmeDB = require('../models/aboutmeDB');
 
 module.exports = {
   // get all posts and set them in res.locals.posts
   index(req, res) {
-    console.log(req.params);
-    res.status(200).json({
-      message: 'testing',
-    });
+    const data = aboutmeDB.findAll();
+    res.status(200).json(data);
   },
 
   getOne(req, res) {
-    console.log(req.params, 'in one');
-    res.status(200).json({
-      message: 'testing one',
-    });
+    const data = aboutmeDB.findByParam(req.params.param);
+    res.status(200).json(data);
   },
 };
