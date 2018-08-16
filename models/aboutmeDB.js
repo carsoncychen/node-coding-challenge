@@ -24,13 +24,13 @@ const aboutMeData = [
 
 module.exports = {
 
-  // iterate through aboutMeData
-  // return an array of objects containing only questions and answers
   find(query) {
+    // if no query passed in, return whole data
     if (Object.keys(query).length === 0) {
       return aboutMeData;
     }
 
+    // iterate through whole data looking for match of query.q
     for (let i = 0; i < aboutMeData.length; i++) {
       if (aboutMeData[i].param === query.q) {
         const result = {};
@@ -40,6 +40,7 @@ module.exports = {
       }
     }
 
+    // return Not Found message if no match
     return { message: 'Not Found' };
   },
 };
