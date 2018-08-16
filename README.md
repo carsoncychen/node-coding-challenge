@@ -1,5 +1,11 @@
 # Node-Coding-Challenge
 
+* Seeking feedback to improve.
+
+### Reasoning
+* Utilizing MVC design for the separation of concern.
+* Using ejs as the view engine.
+
 ### Requirements
 * Capable of responding to HTTP GET requests.
 * Should have an endpoint(/posts) that dynamically makes a request to (https://jsonplaceholder.typicode.com/posts) and renders an EJS view using the data returned. Only the title and body of all the posts should be displayed in an centered and ordered HTML list on the DOM. The titles should have a font size of 16px and color: #3cb371. The body should have a font size of 12px color: #4A4A4A.
@@ -13,3 +19,4 @@
 
 ### Tech
 * express-generator - simplified initial setup
+* node-fetch - fetch data from URL provided
