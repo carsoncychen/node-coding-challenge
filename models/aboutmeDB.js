@@ -2,22 +2,22 @@
 const aboutMeData = [
   {
     question: 'Tell me a little bit about yourself?',
-    answer: 'sure',
+    answer: 'Enjoy breaking down a complex problem and write efficient solutions for each part of the problem.',
     param: 'description',
   },
   {
     question: 'What excites you about technology?',
-    answer: 'sure',
+    answer: 'I love software development because of the opportunities to face new challenges and learn new technologies constantly.',
     param: 'tech',
   },
   {
     question: 'What is your preferred technology stack',
-    answer: 'sure',
+    answer: 'I have experience in JavaScript, Express.js, Node.js, React.js, and PostgreSQL. My next target is to learn React Native, Python, and Redux',
     param: 'techstack',
   },
   {
     question: 'What are your favorite hobbies?',
-    answer: 'sure',
+    answer: 'My favorite hobby is coffee brewing, specifically latte art.',
     param: 'hobbies',
   },
 ];
