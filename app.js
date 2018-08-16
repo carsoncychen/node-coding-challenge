@@ -1,5 +1,4 @@
 const express = require('express');
-const request = require('request');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -29,18 +28,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/posts', postsRouter);
 
-// app.use('/aboutme', aboutmeRouter);
+app.use('/aboutme', aboutmeRouter);
 
 // setup home index page
 app.get('/', (req, res) => {
   res.render('index');
 });
 
-// error check for anything entered other than / or /posts
+// error check for anything entered other than proper routes
 app.use('*', (req, res) => {
-  res.status(400).json({
-    message: 'Opps, not found',
-  });
+  res.render('error');
 });
 
 // setup server to listen on port

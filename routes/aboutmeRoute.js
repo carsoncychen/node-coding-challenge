@@ -1,13 +1,15 @@
-// const express = require('express');
+const express = require('express');
 
-// // importing controllers
+// importing controllers
 
-// const aboutmeController = require('../controllers/aboutmeController');
-// const views = require('../controllers/viewController');
+const aboutmeController = require('../controllers/aboutmeController');
 
-// const routes = express.Router();
+const routes = express.Router();
 
-// routes.route('/aboutme')
-//   .get(aboutmeController.index, views.showAboutme, views.show404)
+routes.route('/:param')
+  .get(aboutmeController.getOne);
 
-// module.exports = routes;
+routes.route('/')
+  .get(aboutmeController.index);
+
+module.exports = routes;

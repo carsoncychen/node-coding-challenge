@@ -15,4 +15,8 @@ module.exports = {
       posts: res.locals.posts,
     });
   },
+
+  showAboutme(req, res) {
+    res.render('aboutme');
+  },
 };
